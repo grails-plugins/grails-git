@@ -15,6 +15,7 @@ grails.project.dependency.resolution = {
 
     dependencies {
           build "org.eclipse.jgit:org.eclipse.jgit:1.2.0.201112221803-r",
+                "org.eclipse.jgit:org.eclipse.jgit.ui:1.2.0.201112221803-r",
                 "org.eclipse.jgit:org.eclipse.jgit.console:1.2.0.201112221803-r"
     }
 }

@@ -8,6 +8,8 @@ import org.eclipse.jgit.transport.RefSpec
 import org.eclipse.jgit.transport.RemoteConfig
 import org.eclipse.jgit.transport.URIish
 import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider
+import org.eclipse.jgit.console.ConsoleCredentialsProvider
+import org.eclipse.jgit.awtui.AwtCredentialsProvider
 
 
 /**
@@ -199,7 +201,8 @@ class GitScmProvider {
         def pushCmd = gitClient.push()
         pushCmd.remote = "origin"
         pushCmd.refSpecs = [new RefSpec("master")]
-        pushCmd.setCredentialsProvider(new UsernamePasswordCredentialsProvider(*credentials))
+//        pushCmd.setCredentialsProvider(new UsernamePasswordCredentialsProvider(*credentials))
+        pushCmd.setCredentialsProvider(new AwtCredentialsProvider())
         pushCmd.call()
     }
 
