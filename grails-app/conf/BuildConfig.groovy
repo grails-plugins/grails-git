@@ -7,11 +7,14 @@ grails.project.dependency.resolution = {
     log "warn"
 
     repositories {
+        grailsPlugins()
+        grailsCentral()
         grailsHome()
-//        mavenRepo "http://download.eclipse.org/jgit/maven"
+        mavenRepo "http://download.eclipse.org/jgit/maven"
     }
 
     dependencies {
-//        build "org.eclipse.jgit:org.eclipse.jgit:0.11.3"
+          build "org.eclipse.jgit:org.eclipse.jgit:1.2.0.201112221803-r",
+                "org.eclipse.jgit:org.eclipse.jgit.console:1.2.0.201112221803-r"
     }
 }
